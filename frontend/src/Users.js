@@ -22,6 +22,16 @@ function Users () {
                 setdata(res.data);
             } catch (err){
                 console.log("Failed to get data", err);
+
+                if (err.response && err.response.status === 401) {
+                    localStorage.removeItem("access");
+                    localStorage.removeItem("refresh");
+                    setAuth(false);
+                    window.location.reload();
+                } else {
+                    setAuth(false);
+                }
+
                 setAuth(false);
             }
         }
