@@ -1,0 +1,151 @@
+/* auth.css */
+
+/* Center the form */
+form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f7f9fc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Form heading */
+form h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Label styling */
+form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Input styling */
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Error messages */
+form p {
+  color: red;
+  margin: 5px 0 0;
+  font-size: 13px;
+}
+
+/* Submit button */
+form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  form {
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+
+/* users.css */
+
+table {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+td {
+  border-top: 1px solid #eee;
+  font-size: 15px;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f5ff;
+}
+
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  tr {
+    margin-bottom: 15px;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td::before {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #555;
+  }
+
+  td:nth-of-type(1)::before { content: "Name"; }
+  td:nth-of-type(2)::before { content: "Email"; }
+}
